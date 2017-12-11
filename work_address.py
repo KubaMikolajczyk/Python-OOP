@@ -11,4 +11,5 @@ class WorkAddress(Address):
         return "{}, {}".format(super().get_full_address(), self.company)
 
     def __eq__(self, other):
-       pass
+        if isinstance(other, WorkAddress):
+            return self.company == other.company
