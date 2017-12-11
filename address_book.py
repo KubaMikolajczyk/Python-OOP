@@ -18,10 +18,10 @@ class AddressBook:
         found_list = []
 
         for adress in self.addresses:
-            if search_phrase == adress.person \
-               or search_phrase == adress.city \
-               or search_phrase == adress.street \
-               or search_phrase == adress.house_no:
+            if search_phrase in adress.person \
+               or search_phrase in adress.city \
+               or search_phrase in adress.street \
+               or search_phrase in adress.house_no:
                 found_list.append(adress)
         
         return found_list
