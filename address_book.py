@@ -15,7 +15,16 @@ class AddressBook:
             raise TypeError
 
     def find(self, search_phrase):
-        pass
+        found_list = []
+
+        for adress in self.addresses:
+            if search_phrase == adress.person \
+               or search_phrase == adress.city \
+               or search_phrase == adress.street \
+               or search_phrase == adress.house_no:
+                found_list.append(adress)
+        
+        return found_list
 
     def sort(self):
         pass
