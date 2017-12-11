@@ -8,7 +8,7 @@ class WorkAddress(Address):
         self.company = company
 
     def get_full_address(self):
-        pass
+        return "{}, {}".format(super().get_full_address(), self.company)
 
     def __eq__(self, other):
        pass
