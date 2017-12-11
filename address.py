@@ -8,6 +8,12 @@ class Address:
 
     def get_full_address(self):
         return "{}, {}, {} {}".format(self.person, self.city, self.street, self.house_no)
+
+    def __repr__(self):
+        return self.get_full_address()
     
     def __eq__(self, other):
-        pass
+        return self.person == other.person \
+               and self.city == other.city \
+               and self.street == other.street \
+               and self.house_no == other.house_no
