@@ -1,5 +1,7 @@
+from address import Address
 
-class WorkAddress:
+
+class WorkAddress(Address):
 
     def __init__(self):
         pass
