@@ -9,8 +9,11 @@ class AddressBook:
         self.addresses = []
 
     def add_address(self, address):
-       pass
-        
+        if isinstance(address, Address):
+            self.addresses.append(address)
+        else:
+            raise TypeError
+
     def find(self, search_phrase):
         pass
 
