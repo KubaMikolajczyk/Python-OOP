@@ -27,7 +27,19 @@ class AddressBook:
         return found_list
 
     def sort(self):
-        pass
+        is_sorted = False
+        length = len(self.addresses) - 1
+
+        while not is_sorted:
+            is_sorted = True
+            for i in range(length):
+                if self.addresses[i].get_full_address() > self.addresses[i+1].get_full_address():
+                    is_sorted = False
+                    temp = self.addresses[i+1]
+                    self.addresses[i+1] = self.addresses[i]
+                    self.addresses[i] = temp
+
+
         
     def create_from_csv(list_name, csv_path):
         pass
